@@ -1,0 +1,363 @@
+/*global style*/
+*{
+    box-sizing:border-box;
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.5;
+    margin:0;
+    padding:0;
+}
+img{
+    width:100%;
+    height:auto;
+}
+/**Nav bar**/
+/*Desktop menu*/
+.desktop-menu{
+    display:none;
+}
+/*Mobile-menu*/
+#nav-bar{
+    background:#333;
+    color:white;
+}
+.mobile-menu{
+    display:flex;
+    justify-content:space-between;
+    padding:0.2em;
+}
+.mobile-menu .home a{
+    text-decoration:none;
+    color:white;
+    background:#1abc9c;
+    padding:0.6em;
+}
+.mobile-menu .menu{
+    margin-right:5px;
+}
+.mobile-menu .home a:hover{
+    background:lightgray;
+    color:#333;
+}
+/**Header**/
+.branding{
+    position:relative;
+}
+.branding .branding-btn{
+    position:absolute;
+    bottom:10%;
+    right:10%;
+}
+.btn-1{
+    border:none;
+    outline:none;
+    background:#333;
+    color:#f0f0f0;
+    padding:1em 1.2em;
+    transition:0.4s;
+}
+.btn-1:hover{
+    background:#1abc9c;
+    color:#f0f0f0;
+}
+/**Main content**/
+/*Member detail (Section 1)*/
+#section-1{
+    text-align:center;
+}
+.member-detail img{
+    width:10em;
+    height:auto;
+    border:1px solid #333;
+    border-radius:50%;
+}
+/*Our work (Section 2)*/
+#section-2{
+    background:#333;
+    color:white;
+    padding:1em;
+}
+#section-2 h1{
+    font-size:2em;
+}
+.course{
+    background:#fff;
+    color:black;
+    margin-bottom:0.5em;
+}
+.course .course-content{
+    padding:0.6em;
+}
+/*Cloud storage (Section 3)*/
+#section-3{
+    text-align:center;
+}
+#section-3 h1{
+    font-size:2em;
+}
+.price-table table{
+    border-collapse:collapse;
+    margin:auto;
+    margin-bottom:0.5em;
+    width:90%;
+}
+.price-table td, .price-table th{
+    border:1px solid lightgray;
+    padding:0.5em;
+}
+.price-table th{
+    background:black;
+    color:white;
+    padding:1.5em;
+    font-size:1.5em;
+}
+.price-table td{
+    padding:1em;
+}
+.sign-up-btn{
+    border:none;
+    padding:1em 1.6em;
+    text-align:center;
+    background:#139e82;
+    color:#f0f0f0;
+    transition:0.4s;
+}
+.sign-up-btn:hover{
+   color:black;
+   background:#e0e0e0; 
+}
+.price-zone .price-table table:hover{
+    box-shadow:2px 3px 8px 2px rgb(192, 188, 188);
+}
+/*Contact & Register (Section 4)*/
+#section-4{
+    background:#eaeaea;
+}
+.info{
+    padding:1em;
+}
+.info .highlight{
+    border-bottom:5px solid #1abc9c;
+    font-size:1.2em;
+}
+.icon-setting{
+    color:#1abc9c;
+    padding-right:0.2em;
+}
+.register-table{
+    padding:1em;
+}
+.register-table form{
+    background:#fff;
+    padding:1em;
+    box-shadow:2px 3px 5px 2px rgb(194, 189, 189);
+}
+.register-table form input[type="text"]{
+    width:100%;
+    padding:0.8em;
+    margin:0.5em 0;
+    border:none;
+    border-bottom:1px solid lightgray;
+}
+.commit-zone{
+    display:flex;
+    justify-content:space-between;
+}
+.submit-btn{
+    border:none;
+    color:white;
+    background:black;
+    padding:0.8em 1em;
+    transition:0.4s;
+}
+.submit-btn:hover{
+    background:#e0e0e0;
+    color:#333;
+}
+/**Footer**/
+#footer-id{
+    text-align:center;
+    background:black;
+    color:white;
+    padding:1em;
+}
+#footer-id a{
+    text-decoration:none;
+    padding:0.2em;
+    color:#1abc9c;
+    font-weight:bold;
+}
+#footer-id a:hover{
+    text-decoration:underline;
+}
+.follow-box{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+}
+.box{
+    color:white;
+    padding:1em;
+    background:#1abc9c;
+    margin:3px;
+}
+/**MEDIA QUERIES**/
+/*For desktop*/
+@media only screen and (min-width:700px){
+    /**Navigation Bar**/
+    /*Mobile menu*/
+    .mobile-menu{
+        display:none;
+    }
+    /*Desktop Menu*/
+    .desktop-menu{
+        display:block;
+    }
+    .desktop-menu ul{
+        list-style-type:none;
+        background:#333;
+        margin:0;
+        overflow:hidden;
+        padding:0;
+    }
+    .desktop-menu li{
+        float:left;
+    }
+    .desktop-menu .search-zone{
+        float:right;
+        margin-top:1em;
+        margin-right:1em;
+    }
+    .desktop-menu .search-zone:hover{
+        color:#1abc9c;
+    }
+    .desktop-menu a{
+        display:inline-block;
+        text-decoration:none;
+        padding:0.8em 1em;
+        color:white;
+    }
+    li a:hover:not(.active), .series-dropdown:hover .dropdown-btn{
+        background:#fff;
+        color:black;
+    }
+    .active{
+        background:#1abc9c;
+    }
+    .active:hover{
+        background:lightgray;
+        color:black;
+    }
+    li.series-dropdown{
+        display:inline-block;
+    }
+    li.series-dropdown .series-dropdown-content{
+        position:absolute;
+        display:none;
+        z-index:1;
+        background:#fff;
+        min-width:160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+    li.series-dropdown .series-dropdown-content a{
+        color:black;
+        display:block;
+        text-align:left;
+    }
+    li.series-dropdown .series-dropdown-content a:hover{
+        background:#13a88b;
+        color:white;
+    }
+    li.series-dropdown:hover .series-dropdown-content{
+        display:block;
+    }
+    /*Branding*/
+    .branding img{
+        width:100%;
+        height:600px;
+        object-fit:cover;
+    }
+    .branding-btn{
+        left:1em;
+        bottom:1em;
+    }
+    .branding-btn .btn-1{
+        padding:2em 3em;
+    }
+    /**Main**/
+    /*Member detail (Section 1)*/
+    #section-1{
+        padding-bottom:2em; 
+    }
+    #section-1 h1{
+        font-size:3em;
+    }
+    .members{
+        display:flex;
+        justify-content:space-around;
+    }
+    .members .member-detail:hover img{
+        border:1px solid #1abc9c;
+    }
+    /*Our Work (Section 2)*/
+    .course-list{
+        display:flex;
+    }
+    .course{
+       flex:30%;
+       margin:1em;
+       transition:0.5s;
+    }
+    .course img{
+        width:100%;
+        height:300px;
+    }
+    .course:hover{
+        border:1px solid #1abc9c;
+    }
+    /*Cloud Storage (Section 3)*/
+    #section-3{
+        padding-bottom:3em;
+    }
+    .price-zone{
+        display:flex;
+    }
+    .price-table{
+        flex:30%;
+    }
+    .price-table:hover{
+        -webkit-transform:scale(1,1.2);
+        -moz-transform:scale(1,1.2);
+        -o-transform:scale(1,1.2);
+        -ms-transform:scale(1,1.2);
+        transform:scale(1,1.2);
+    }
+    /*Contact & register (Section-4)*/
+    #section-4{
+        display:flex;
+    }
+    .info{
+        flex:40%;
+    }
+    .register-table{
+        flex:60%;
+    }
+    .register-table{
+        margin-top:0.5em;
+    }
+    /*Footer*/
+    .box{
+        transition:0.4s ease-in;
+    }
+    .box:hover{
+        -webkit-transform:translate(0,-1em);
+        -moz-transform:translate(0,-1em);
+        -o-transform:translate(0,-1em);
+        -ms-transform:translate(0,-1em);
+        transform:translate(0,-1em);
+        background:lightgray;
+        color:black;
+    }
+}
+
